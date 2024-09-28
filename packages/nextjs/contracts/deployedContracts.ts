@@ -3,116 +3,211 @@
  * You should not edit it manually or your changes might be overwritten.
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
-const ABI_YourContract = [
-    {
-      type: "constructor",
-      inputs: [
-        {
-          name: "_owner",
-          type: "address",
-          internalType: "address",
-        },
-      ],
-      stateMutability: "nonpayable",
-    },
-    {
-      type: "function",
-      name: "pull",
-      inputs: [
-        {
-          name: "isTeam1",
-          type: "bool",
-          internalType: "bool",
-        },
-      ],
-      outputs: [],
-      stateMutability: "nonpayable",
-    },
-    {
-      type: "function",
-      name: "ropePosition",
-      inputs: [],
-      outputs: [
-        {
-          name: "",
-          type: "int256",
-          internalType: "int256",
-        },
-      ],
-      stateMutability: "view",
-    },
-    {
-      type: "function",
-      name: "team1Score",
-      inputs: [],
-      outputs: [
-        {
-          name: "",
-          type: "uint256",
-          internalType: "uint256",
-        },
-      ],
-      stateMutability: "view",
-    },
-    {
-      type: "function",
-      name: "team2Score",
-      inputs: [],
-      outputs: [
-        {
-          name: "",
-          type: "uint256",
-          internalType: "uint256",
-        },
-      ],
-      stateMutability: "view",
-    },
-    {
-      type: "event",
-      name: "RopePositionChanged",
-      inputs: [
-        {
-          name: "newPosition",
-          type: "int256",
-          indexed: false,
-          internalType: "int256",
-        },
-      ],
-      anonymous: false,
-    },
-    {
-      type: "event",
-      name: "ScoreUpdated",
-      inputs: [
-        {
-          name: "team1Score",
-          type: "uint256",
-          indexed: false,
-          internalType: "uint256",
-        },
-        {
-          name: "team2Score",
-          type: "uint256",
-          indexed: false,
-          internalType: "uint256",
-        },
-      ],
-      anonymous: false,
-    },
-  ]
-  
+
 const deployedContracts = {
-  31337: {
+  41454: {
     YourContract: {
-      address: "0x0165878a594ca255338adfa4d48449f69242eb8f",
-      abi: ABI_YourContract,
+      address: "0xeedb46bfff0ad1bd372d953898d00e95a36dc68a",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "pull",
+          inputs: [
+            {
+              name: "isTeam1",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "ropePosition",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "int256",
+              internalType: "int256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "team1Score",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "team2Score",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "event",
+          name: "RopePositionChanged",
+          inputs: [
+            {
+              name: "newPosition",
+              type: "int256",
+              indexed: false,
+              internalType: "int256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ScoreUpdated",
+          inputs: [
+            {
+              name: "team1Score",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "team2Score",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+      ],
       inheritedFunctions: {},
     },
   },
   11155111: {
     YourContract: {
-      address: "0x4309E1c0Fb02525eEE033906d7e82041BE3AEF06",
-      abi: ABI_YourContract,
+      address: "0x5adee6f7320731bf0b931da3b2bf526682bb350d",
+      abi: [
+        {
+          type: "constructor",
+          inputs: [
+            {
+              name: "_owner",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "pull",
+          inputs: [
+            {
+              name: "isTeam1",
+              type: "bool",
+              internalType: "bool",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "ropePosition",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "int256",
+              internalType: "int256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "team1Score",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "function",
+          name: "team2Score",
+          inputs: [],
+          outputs: [
+            {
+              name: "",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          stateMutability: "view",
+        },
+        {
+          type: "event",
+          name: "RopePositionChanged",
+          inputs: [
+            {
+              name: "newPosition",
+              type: "int256",
+              indexed: false,
+              internalType: "int256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "ScoreUpdated",
+          inputs: [
+            {
+              name: "team1Score",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+            {
+              name: "team2Score",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+      ],
       inheritedFunctions: {},
     },
   },

@@ -21,3 +21,12 @@ node_modules
 
 # cli
 dist
+packages/foundry/broadcast/Deploy.s.sol/11155111/run-1727490795.json
+packages/foundry/broadcast/Deploy.s.sol/11155111/run-1727490907.json
+packages/foundry/broadcast/Deploy.s.sol/11155111/run-1727502259.json
+packages/foundry/broadcast/Deploy.s.sol/11155111/run-latest.json
+packages/foundry/broadcast/Deploy.s.sol/41454/run-1727520949.json
+packages/foundry/broadcast/Deploy.s.sol/41454/run-latest.json
+packages/foundry/deployments/41454.json
+packages/foundry/deployments/11155111.json
+packages/nextjs/pnpm-lock.yaml

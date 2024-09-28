@@ -1,4 +1,5 @@
 import * as chains from "viem/chains";
+import { monad } from "./utils/networks.monad";
 
 export type ScaffoldConfig = {
   targetNetworks: readonly chains.Chain[];
@@ -10,7 +11,7 @@ export type ScaffoldConfig = {
 
 const scaffoldConfig = {
   // The networks on which your DApp is live
-  targetNetworks: [chains.sepolia, chains.foundry],
+  targetNetworks: [monad, chains.sepolia, chains.foundry],
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect if you only target the local network (default is 4000)
