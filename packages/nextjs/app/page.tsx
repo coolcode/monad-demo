@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
 
   // 计算旗子偏移量
-  const flagOffset = (ropePositionOnChain ? Number(ropePositionOnChain) : ropePosition) * 5 // 每单位移动5%
+  const flagOffset =   (ropePositionOnChain ? Number(ropePositionOnChain) : ropePosition) * (200 /5) // 每单位移动5%
 
   console.log("Rendering with rope position:", ropePosition, "Flag offset:", flagOffset)
 
