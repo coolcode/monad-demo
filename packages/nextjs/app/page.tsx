@@ -15,13 +15,13 @@ import {
   useReadContract, useWriteContract, type BaseError
 } from "wagmi"
 // import { parseEther } from 'viem'
-import deployedContracts from "~~/contracts/deployedContracts"
-import { useState } from "react"
+// import deployedContracts from "~~/contracts/deployedContracts" 
+import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth"
 
-const wagmiContractConfig = {
-  address: deployedContracts.sepolia.YourContract.address,
-  abi: deployedContracts.sepolia.YourContract.abi,
-}
+// const wagmiContractConfig = {
+//   address: deployedContracts.sepolia.YourContract.address,
+//   abi: deployedContracts.sepolia.YourContract.abi,
+// }
 
 const Home: NextPage = () => {
   //   const { address: connectedAddress } = useAccount();
@@ -44,21 +44,20 @@ const Home: NextPage = () => {
   const team1Score = 0
   const team2Score = 0
 
-
-  const { data: ropePositionOnChain } = useReadContract({
-    ...wagmiContractConfig,
+  const { data: ropePositionOnChain } = useScaffoldReadContract({
+    contractName: "YourContract",
     functionName: 'ropePosition',
     args: [],
   })
 
-  const { data: team1ScoreOnChain } = useReadContract({
-    ...wagmiContractConfig,
+  const { data: team1ScoreOnChain } = useScaffoldReadContract({
+    contractName: "YourContract",
     functionName: 'team1Score',
     args: [],
   })
 
-  const { data: team2ScoreOnChain } = useReadContract({
-    ...wagmiContractConfig,
+  const { data: team2ScoreOnChain } = useScaffoldReadContract({
+    contractName: "YourContract",
     functionName: 'team2Score',
     args: [],
   })
@@ -68,11 +67,10 @@ const Home: NextPage = () => {
     error,
     isPending,
     writeContract
-  } = useWriteContract()
+  } = useScaffoldWriteContract("YourContract")
 
   const pullRope = (isTeam1: boolean) => {
     writeContract({
-      ...wagmiContractConfig,
       functionName: "pull",
       args: [isTeam1],
     })
@@ -122,9 +120,9 @@ const Home: NextPage = () => {
         <button className="tug-of-war-pull-button" onClick={() => pullRope(false)}>Cheer for Team 2</button>
       </div>
       <div className="m-4">
-      <p>[OnChain] ropePosition: { Number(ropePositionOnChain)}, 
-         team1Score: {Number(team1ScoreOnChain)},
-         team2Score: {Number(team2ScoreOnChain)},
+        <p>[OnChain] ropePosition: {Number(ropePositionOnChain)},
+          team1Score: {Number(team1ScoreOnChain)},
+          team2Score: {Number(team2ScoreOnChain)},
         </p>
         {isPending && 'Confirming...'}
         {hash && <div>Transaction Hash:

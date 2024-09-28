@@ -109,7 +109,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
   },
-  sepolia: {
+  11155111: {
     YourContract: {
       address: "0x4309E1c0Fb02525eEE033906d7e82041BE3AEF06",
       abi: ABI_YourContract,
